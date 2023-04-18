@@ -1,0 +1,25 @@
+<h2>Search Waves</h2>
+<form action="/waves" method="GET">
+  <label>Name</label>
+  <input type="text" name="_id" value="<%= searchOptions._id %>">
+  <button type="submit">Search</button>
+</form>
+<br>
+
+<table border="1">
+    <tr>
+        <th>Wave Name</th>
+        <th>Wave Composition</th>
+        <th>Wave Strength</th>
+    </tr>
+    <tr>
+        <%  waves.forEach(wave => { %>
+            <td><%= wave._id %></td>
+            <td><%= wave.composition %></td>
+            <td><%= wave.wave_strength %></td>
+        
+    </tr>
+    <% }) %>
+</table>
+<!-- <% waves.forEach(wave => { %>
+<% }) %> -->
