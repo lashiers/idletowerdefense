@@ -9,6 +9,7 @@ if (process.env.NODE_ENV !== 'production') {
   
   const indexRouter = require('./routes/index')
   const waveRouter = require('./routes/waves')
+  const towerRouter = require('./routes/towers')
   
   app.set('view engine', 'ejs')
   app.set('views', __dirname + '/views')
@@ -26,5 +27,6 @@ if (process.env.NODE_ENV !== 'production') {
   
   app.use('/', indexRouter)
   app.use('/waves', waveRouter)
+  app.use('/towers', towerRouter)
   
   app.listen(process.env.PORT || 3000)
