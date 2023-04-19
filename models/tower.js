@@ -9,7 +9,7 @@ const towerSchema = new mongoose.Schema({
   times_deployed: { type: Number, default: 0 },
   times_sold: { type: Number, default: 0 },
   base_cost: { type: Number },
-  target_fliers: { type: String },
+  target_fliers: { type: Boolean },
 })
 
 module.exports = mongoose.model('Tower', towerSchema)

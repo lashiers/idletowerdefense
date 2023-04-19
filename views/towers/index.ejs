@@ -1,0 +1,30 @@
+<h2>Search Towers</h2>
+<form action="/towers" method="GET">
+  <label>Name</label>
+  <input type="text" name="_id" value="<%= searchOptions._id %>">
+  <button type="submit">Search</button>
+</form>
+<br>
+
+<table border="1">
+    <tr>
+        <th>Tower Name</th>
+        <th>Tower Composition</th>
+        <th>Min Range</th>
+        <th>Max Range</th>
+        <th>Lead Amount</th>
+        <th>Base Cost</th>
+        <th>Target Fliers</th>
+    </tr>
+    <tr>
+        <%  towers.forEach(tower => { %>
+            <td><%= tower._id %></td>
+            <td><%= tower.composition %></td>
+            <td><%= tower.min_range %></td> 
+            <td><%= tower.max_range %></td> 
+            <td><%= tower.lead_amount %></td> 
+            <td><%= tower.base_cost %></td> 
+            <td><%= tower.target_fliers %></td> 
+    </tr>
+    <% }) %>
+</table>
